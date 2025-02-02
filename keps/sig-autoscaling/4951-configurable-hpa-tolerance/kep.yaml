@@ -1,50 +1,44 @@
-title: Compatibility Versions
-kep-number: 4330
+title: Configurable tolerance for HPA
+kep-number: 4951
 authors:
-  - "@alexzielenski"
-  - "@jpbetz"
-  - "@liggitt"
-  - "@logicalhan"
-  - "@siyuanfoundation"
-owning-sig: sig-architecture
-participating-sigs:
-  - sig-api-machinery
-  - wg-lts
-status: implementable
-creation-date: 2023-12-01
+  - "@pr00se"
+  - "@jm-franc"
+owning-sig: sig-autoscaling
+status: provisional
+creation-date: 2024-11-05
 reviewers:
-  - "@deads2k"
-  - "@thockin"
-  - "@wojtek-t"
-  - "@dims"
+  - "@gjtempleton"
+  - "@raywainman"
 approvers:
-  - "@johnbelamaric"
-  - "@dims"
+  - TBD
+
 see-also:
-  - "/keps/sig-api-machinery/4020-unknown-version-interoperability-proxy"
+  - "/keps/sig-autoscaling/853-configurable-hpa-scale-velocity"
+replaces:
+
+# The target maturity stage in the current dev cycle for this KEP.
 stage: alpha
 
 # The most recent milestone for which work toward delivery of this KEP has been
 # done. This can be the current (upcoming) milestone, if it is being actively
 # worked on.
-latest-milestone: "v1.31"
+latest-milestone: "v1.33"
 
 # The milestone at which this feature was, or is targeted to be, at each stage.
 milestone:
-  alpha: "v1.31"
-  beta: "v1.32"
-  stable: "v1.34"
+  alpha: "v1.33"
+  beta: TBD
+  stable: TBD
 
 # The following PRR answers are required at alpha release
 # List the feature gate name and the components for which it must be enabled
 feature-gates:
-  - name: CompatibilityVersions
+  - name: HPAConfigurableTolerance
     components:
       - kube-apiserver
       - kube-controller-manager
-      - kube-scheduler
 disable-supported: true
 
 # The following PRR answers are required at beta release
-metrics:
-  - my_feature_metric
+#metrics:
+#  - my_feature_metric
